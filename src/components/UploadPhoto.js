@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { uploadImageToStorage, saveImageUrls } from "../services/imagesStorage";
 import { Form, Button, Container, Alert, Row, Col } from "react-bootstrap";
+import Loading from "./Loading";
 
 const UploadPhoto = () => {
     const [imageUpload, setImageUpload] = useState(null);
@@ -9,6 +10,7 @@ const UploadPhoto = () => {
     const [imageYear, setImageYear] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const uploadFile = async () => {
         if (!imageUpload) {
@@ -18,6 +20,7 @@ const UploadPhoto = () => {
         }
 
         try {
+            setLoading(true);
             setError("");
             setSuccess("");
 
@@ -39,6 +42,9 @@ const UploadPhoto = () => {
             setImageDescription("");
         } catch (error) {
             setError("Error uploading file: " + error.message);
+        }
+        finally {
+            setLoading(false);
         }
     };
 
@@ -95,6 +101,7 @@ const UploadPhoto = () => {
                         <Button variant="primary" onClick={uploadFile}>
                             Upload
                         </Button>
+                        {loading && <Loading />}
                     </Form>
                 </Col>
             </Row>
