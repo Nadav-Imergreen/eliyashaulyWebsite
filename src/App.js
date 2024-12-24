@@ -5,24 +5,20 @@ import Gallery from "./components/Gallery";
 import PaintingsByYear from "./components/PaintingsByYear";
 import UploadPhoto from "./components/UploadPhoto";
 import About from "./components/About";
+import './style.css';
+
 
 function App() {
     return (
         <Router>
             <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
                 <Container>
-                    <Navbar.Brand href="/"
-                                  style={{
-                                      fontFamily: "'Cochin', sans-serif", // Replace with your desired font
-                                      fontSize: '24px', // Adjust size as needed
-                                      fontWeight: 'bold', // Optional
-                                  }}
-                    >
+                    <Navbar.Brand href="/"className="custom-font" >
                         Eliya Shauly</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="/gallery">Gallery</Nav.Link>
+                            <Nav.Link href="/gallery">Paintings</Nav.Link>
                             <Nav.Link href="/about">About</Nav.Link>
                             <Nav.Link href="/upload">Upload Image</Nav.Link>
                         </Nav>
