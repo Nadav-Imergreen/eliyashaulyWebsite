@@ -1,6 +1,62 @@
 .custom-font {
     font-family: 'Cochin', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color:darkblue
+}
+
+.ander-card-titel-font {
+    font-family: 'Cochin', sans-serif;
+    color: darkblue;
     font-size: 25px;
     font-weight: bold;
-    color:black
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the parent container has a height defined */
+    text-align: center;
 }
+
+.ander-card-description-font {
+    font-family: 'Cochin', sans-serif;
+    font-size: 15px;
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the parent container has a height defined */
+    text-align: center;
+}
+
+.custom-modal .modal-content {
+    max-width: 90%; /* Adjust for responsiveness */
+    margin: auto; /* Center the modal */
+    border-radius: 10px; /* Optional: add rounded corners */
+    padding: 10px; /* Add some padding */
+    color: darkblue
+}
+
+.custom-modal img {
+    width: 100%; /* Ensure the image fits the modal width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.custom-modal .modal-footer {
+    font-family: 'Cochin', sans-serif;
+    color: darkblue;
+    text-align: center; /* Center-align text in the footer */
+    padding: 10px;
+    color: darkblue
+}
+
+.contact-font {
+    font-family: 'Cochin', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+

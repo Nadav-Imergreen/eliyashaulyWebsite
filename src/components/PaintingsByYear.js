@@ -5,7 +5,7 @@ import ErrorLine from './ErrorLine';
 import Loading from './Loading';
 import ResultsTable from './ResulteTable';
 import { useParams } from 'react-router-dom';
-
+import '../style.css';
 function PaintingsByYear() {
     const { year } = useParams();
     const [searchResults, setSearchResults] = useState([]);
@@ -38,7 +38,7 @@ function PaintingsByYear() {
             <Container className="my-4">
                 <Row className="justify-content-center text-center">
                     <Col>
-                        <p style={{ fontFamily: 'Arial, sans-serif', fontSize: '50px', fontWeight: 'bold' }}>
+                        <p className="custom-font">
                             {year}
                         </p>
                     </Col>

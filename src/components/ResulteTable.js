@@ -40,15 +40,14 @@ function ResultsTable({ searchResults }) {
 
             {/* Modal for Detailed View */}
             {selectedIndex !== null && (
-                <Modal show={true} onHide={() => setSelectedIndex(null)} centered>
+                <Modal show={true} onHide={() => setSelectedIndex(null)} centered className="custom-modal">
                     <Modal.Body>
                         <img
                             src={searchResults[selectedIndex].url}
-                            alt={searchResults[selectedIndex].name || "Image"}
-                            style={{ width: "100%", height: "auto" }}
+                            alt={searchResults[selectedIndex].name || "Image"}  
                         />
                     </Modal.Body>
-                    <Modal.Footer style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <Modal.Footer>
                         <div style={{ position: "absolute", top: "100%", left: "0", zIndex: 999 }}>
                             <Button variant="secondary" onClick={handlePrevious} disabled={selectedIndex === 0}>
                                 &#8592; {/* Left arrow */}
