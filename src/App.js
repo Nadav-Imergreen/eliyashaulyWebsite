@@ -7,12 +7,13 @@ import UploadPhoto from "./components/UploadPhoto";
 import About from "./components/About";
 import ContactMe from "./components/ContactMe";
 import './style.css';
+import HomePage from "./components/HomePage";
 
 
 function App() {
     return (
         <Router>
-            <Navbar class="navbar navbar-light bg-light">
+            <Navbar variant="blue" bg="white" expand="lg" sticky="top" style={{ marginTop: "20px" }}>
                 <Container>
                     <Navbar.Brand href="/" className="custom-font" >
                         Eliya Shauly</Navbar.Brand>
@@ -29,7 +30,7 @@ function App() {
             </Navbar>
 
             <Routes>
-                <Route path="/" element={<Gallery/>}/>
+                <Route path="/" element={<HomePage/>}/>
                 <Route path="/gallery" element={<Gallery/>}/>
                 <Route path="/gallery/:year" element={<PaintingsByYear/>}/>
                 <Route path="/about" element={<About/>}/>
