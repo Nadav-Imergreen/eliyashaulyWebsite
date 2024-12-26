@@ -1,62 +1,29 @@
-//import React from "react";
-//import { Container } from "react-bootstrap";
-
-//function About() {
-//    return (
-//        <Container className="mt-4">
-//            <h2>About Me</h2>
-//            <p>
-//                אהובתי, <br />
-//                דווקא השיחה האחרונה שלנו הזכירה לי כמה אני אוהב אותך ולמה בחרתי בך.
-//                גם מתוך התסכול, חוסר האונים, וחוסר השליטה, את רואה אותי ומרגישה צורך לתת לי מקום וביטוי.
-//                את מפקפקת בדעות שלך כי אולי הן מוטות משיקולי לחץ ותסכול, ואז את אומרת: "תדבר עם אבא שלי."
-//                זה מדהים בעיני שתדעי.
-//            </p>
-//            <p>
-//                אז כן, אני אוהב אותך. את טובה, מתחשבת, יוזמת ושואפת להיות הכי טובה. <br />
-//                עם חיוך וצחוק כובש, חוש הומור קורע, ומבט מרענן על העולם. <br />
-//                וגם, כי את אוהבת אותי ורואה בי את הגבר שלך, וזה עושה לי תחושה כל כך טובה.
-//                ואיך שכחתי כמה את יפה. <br />
-//                ואיזה תחת מדהים יש לך, אללה יסטור. וריחך, כריח הינקינטון.
-//            </p>
-//            <p>
-//               איזה כיף לי שיש לי אותך חתלתולה סקסית שלי. 
-//            </p>
-//        </Container>
-//    );
-//}
-
-//export default About;
-
-
 import React from "react";
 import { Container } from "react-bootstrap";
+import '../style.css';
 
 function About() {
     return (
-        <Container className="mt-4">
-            <h2>About Me</h2>
-            <p>
-                My love, <br />
-                Our last conversation reminded me how much I love you and why I chose you.
-                Even through frustration, helplessness, and lack of control, you see me and feel the need to give me space and expression.
-                You doubt your opinions because they may be biased by pressure and frustration, and then you say: "Talk to my dad."
-                It's amazing to me that you know this.
+        <Container className="mt-5 about-container">
+            <h2 className="section-title">About Me</h2>
+            <p className="text-content">
+                Born in Israel in 2001, lived and work in Yahod. Received my BFA fine-art from Bezalel Academy of Art and Design Jerusalem (2023).
             </p>
-            <p>
-                So yes, I love you. You are kind, considerate, proactive, and strive to be the best. <br />
-                With a captivating smile and laughter, a great sense of humor, and a refreshing outlook on the world. <br />
-                And also, because you love me and see me as your man, and that makes me feel so good.
-                How could I forget how beautiful you are? <br />
-                And what an amazing figure you have, Allah yistoor. And your scent, like hyacinth.
+            <h2 className="section-title">Artist Statement</h2>
+            <p className="text-content">
+                My works emerge from a process of staging and photography, in which I explore the connection between the body and its environment, between the human and the material. I focus on moments that exist "in between", ambiguous and emotionally charged situations where the body meets stone, metal, or another material, creating a deep and physical dialogue with its surroundings.
             </p>
-            <p>
-                How lucky I am to have you, my sexy kitten.
+            <p className="text-content">
+                I concentrate on small moments of interaction, sometimes everyday but always filled with emotional tension, whether it is a body lying on cold metal, leaning on an old tractor, or surrendering to the weight of the day in a simple chair. Through my paintings, I seek to capture these moments and evoke a feeling that cannot be described in words, a raw emotion that invites the viewer to pause, feel, and reflect.
+            </p>
+            <p className="text-content">
+                My process begins with staging moments where the body and the environment are intertwined, turning them into an open interpretive space through color, composition, and visual tension. I create scenes that place the body in unexpected contexts, provoking feelings of intimacy and detachment, fragility and strength.
+            </p>
+            <p className="text-content">
+                Ultimately, my paintings are not only visual representations of moments but an invitation to deep emotional reflection and questions about the connections between humans, material, and sensation.
             </p>
         </Container>
     );
 }
 
 export default About;
-
-
