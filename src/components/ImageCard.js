@@ -28,7 +28,7 @@ function ImageCard({ image }) {
             </Row>
             <Row>
                 <Col>
-                    <p className="ander-card-description-font">{image.description || "Untitled"}</p>
+                    <p className="ander-card-description-font">{image.description || "Oil on canvas, 80x60 cm"}</p>
                 </Col>
             </Row>
         </Col>

@@ -1,8 +1,12 @@
 .custom-font {
     font-family: 'Cochin', sans-serif;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     color:darkblue
+}
+
+.text-darkblue {
+    color: #00008B; /* Dark blue color */
 }
 
 .ander-card-titel-font {
@@ -79,7 +83,6 @@
     font-family: 'Cochin', serif;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
     color: darkblue;
     margin-bottom: 1.5rem;
     text-align: justify;
@@ -88,4 +91,20 @@
 .mt-5 {
     margin-top: 3rem !important;
 }
+
+.gallery-image {
+    width: 100%; /* Ensures the image fits the container */
+    height: 250px; /* Sets a fixed height for all images */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
+    border: 2px solid #ddd; /* Light gray frame around the image */
+    border-radius: 8px; /* Adds a gentle rounded frame */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
 
