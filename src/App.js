@@ -15,7 +15,7 @@ function App() {
         <Router>
             <Navbar variant="blue" bg="white" expand="lg" sticky="top" style={{ marginTop: "30px" }}>
                 <Container>
-                    <Navbar.Brand href="/" className="custom-font fs-1 ">
+                    <Navbar.Brand href="/" className="custom-font fs-1">
                         Eliya Shauly
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>

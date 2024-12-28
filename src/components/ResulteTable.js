@@ -1,11 +1,11 @@
-import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Row, Container } from "react-bootstrap";
 import ImageCard from "./ImageCard";
 import { Modal, Button } from "react-bootstrap";
-import { useState } from 'react';
 
 function ResultsTable({ searchResults }) {
-
+    // Sort searchResults by the "index" field
+    const sortedResults = [...searchResults].sort((a, b) => a.index - b.index);
 
     const [selectedIndex, setSelectedIndex] = useState(null);
 
@@ -14,7 +14,7 @@ function ResultsTable({ searchResults }) {
     };
 
     const handleNext = () => {
-        if (selectedIndex < searchResults.length - 1) {
+        if (selectedIndex < sortedResults.length - 1) {
             setSelectedIndex(selectedIndex + 1);
         }
     };
@@ -26,49 +26,82 @@ function ResultsTable({ searchResults }) {
     };
 
     return (
-       <React.Fragment >
-        <Container>
-            <Row xs={1} sm={2} md={3} lg={4} className="g-4">
-                    {searchResults.map((image, index) => (
-                        <div onClick={() => handleSelect(index)}>
-                            <ImageCard key={image.id} image={image} />
+        <React.Fragment>
+            <Container>
+                <Row xs={1} sm={1} md={2} lg={2} className="g-4">
+                    {sortedResults.map((image, index) => (
+                        <div key={image.id} onClick={() => handleSelect(index)}>
+                            <ImageCard image={image} />
                         </div>
-                ))}
-            </Row>
+                    ))}
+                </Row>
             </Container>
-
 
             {/* Modal for Detailed View */}
             {selectedIndex !== null && (
-                <Modal show={true} onHide={() => setSelectedIndex(null)} centered className="custom-modal">
-                    <Modal.Body>
+                <Modal
+                    show={true}
+                    onHide={() => setSelectedIndex(null)}
+                    centered
+                    className="custom-modal"
+                >
+                    <Modal.Body style={{ position: "relative", padding: 0 }}>
+                        {/* Left Arrow */}
+                        <Button
+                            variant="secondary"
+                            onClick={handlePrevious}
+                            disabled={selectedIndex === 0}
+                            style={{
+                                position: "absolute",
+                                left: "-50px",
+                                top: "50%",
+                                transform: "translateY(-50%)",
+                                zIndex: 999,
+                                borderRadius: "50%",
+                                padding: "10px",
+                            }}
+                        >
+                            &#8592; {/* Left arrow */}
+                        </Button>
+
+                        {/* Image */}
                         <img
-                            src={searchResults[selectedIndex].url}
-                            alt={searchResults[selectedIndex].name || "Image"}  
+                            src={sortedResults[selectedIndex].url}
+                            alt={sortedResults[selectedIndex].name || "Image"}
+                            style={{
+                                display: "block",
+                                maxWidth: "100%",
+                                height: "auto",
+                                margin: "0 auto",
+                            }}
                         />
+
+                        {/* Right Arrow */}
+                        <Button
+                            variant="secondary"
+                            onClick={handleNext}
+                            disabled={selectedIndex === sortedResults.length - 1}
+                            style={{
+                                position: "absolute",
+                                right: "-50px",
+                                top: "50%",
+                                transform: "translateY(-50%)",
+                                zIndex: 999,
+                                borderRadius: "50%",
+                                padding: "10px",
+                            }}
+                        >
+                            &#8594; {/* Right arrow */}
+                        </Button>
                     </Modal.Body>
                     <Modal.Footer>
-                        <div style={{ position: "absolute", top: "100%", left: "0", zIndex: 999 }}>
-                            <Button variant="secondary" onClick={handlePrevious} disabled={selectedIndex === 0}>
-                                &#8592; {/* Left arrow */}
-                            </Button>
-                        </div>
                         <div style={{ textAlign: "center", width: "100%" }}>
-                            <h5>{searchResults[selectedIndex].name}</h5>
-                            <p>{searchResults[selectedIndex].description}</p>
+                            <h5>{sortedResults[selectedIndex].name}</h5>
+                            <p>{sortedResults[selectedIndex].description}</p>
                         </div>
-                        <div style={{ position: "absolute", top: "100%", right: "0", zIndex: 999 }}>
-                            <Button variant="secondary" onClick={handleNext} disabled={selectedIndex === searchResults.length - 1}>
-                                &#8594; {/* Right arrow */}
-                            </Button>
-                        </div>
-
                     </Modal.Footer>
                 </Modal>
             )}
-
-
-
         </React.Fragment>
     );
 }

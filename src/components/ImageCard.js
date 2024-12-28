@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Col ,Row} from "react-bootstrap";
 import '../style.css';
+
 function ImageCard({ image }) {
     return (
         <Col>
@@ -10,13 +11,7 @@ function ImageCard({ image }) {
                         <Card.Img
                             variant="top"
                             src={image.url}
-                            alt={image.name || "Image"}
-                            style={{
-                                width: "100%",
-                                height: "auto",
-                                objectFit: "contain", // Ensures the entire image fits within the card
-                                objectPosition: "center" // Centers the image
-                            }}
+                            alt={"eliya shauly" + image.name || "eliya shauly Image"}
                         />
                     </Card>
                 </Col>
