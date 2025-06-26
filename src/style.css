@@ -1,0 +1,137 @@
+.custom-font {
+  font-family: "Jeju Hallasan", cursive;
+  font-size: 70px;
+  font-weight: bold;
+  color: darkblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.rights_reserved-font {
+  font-family: "Jeju Hallasan", cursive;
+  font-size: 15px;
+  padding: 5px 10px 15px 20px;
+  color: gray;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.text-darkblue {
+  color: #00008b; /* Dark blue color */
+}
+
+.ander-card-titel-font {
+  font-family: "Jeju Hallasan", cursive;
+  color: darkblue;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the parent container has a height defined */
+  text-align: center;
+}
+
+.ander-card-description-font {
+  font-family: "Jeju Hallasan", cursive;
+  font-size: 15px;
+  color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the parent container has a height defined */
+  text-align: center;
+}
+
+.ander-card-image-font {
+  width: 100%;
+  height: auto;
+}
+
+.custom-modal .modal-content {
+  max-width: 90%; /* Adjust for responsiveness */
+  margin: auto; /* Center the modal */
+  border-radius: 10px; /* Optional: add rounded corners */
+  padding: 10px; /* Add some padding */
+  color: darkblue;
+}
+
+.custom-modal img {
+  width: 100%; /* Ensure the image fits the modal width */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.custom-modal .modal-footer {
+  font-family: "Jeju Hallasan", cursive;
+  color: darkblue;
+  text-align: center; /* Center-align text in the footer */
+  padding: 10px;
+  color: darkblue;
+}
+
+.contact-font {
+  font-family: "Jeju Hallasan", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.about-container {
+  font-family: "Jeju Hallasan", cursive;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-family: "Jeju Hallasan", cursive;
+  font-size: 2rem;
+  color: darkblue;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.text-content {
+  font-family: "Jeju Hallasan", cursive;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: darkblue;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.gallery-image {
+  width: 100%; /* Ensures the image fits the container */
+  height: 250px; /* Sets a fixed height for all images */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
+  border: 2px solid #ddd; /* Light gray frame around the image */
+  border-radius: 8px; /* Adds a gentle rounded frame */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Center the spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; /* Full viewport width */
+}
+
+/* Customize spinner size */
+.custom-spinner {
+  width: 5rem; /* Adjust spinner size */
+  height: 5rem; /* Adjust spinner size */
+  border-width: 0.5rem; /* Optional: Adjust border thickness */
+}
