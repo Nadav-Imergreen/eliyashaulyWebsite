@@ -1,26 +1,42 @@
+@font-face {
+  font-family: 'Hallasan';
+  src: url('./fonts/JejuHallasan-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
 .custom-font {
-  font-family: "Jeju Hallasan", cursive;
+  font-family: 'Hallasan', cursive;
   font-size: 70px;
-  font-weight: bold;
-  color: darkblue;
+  color: black !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-font {
+  font-family: 'Hallasan', cursive;
+  font-size: 70px;
 }
 
 .rights_reserved-font {
-  font-family: "Jeju Hallasan", cursive;
+  font-family: "Hallasan", cursive;
   font-size: 15px;
   padding: 5px 10px 15px 20px;
   color: gray;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.text-darkblue {
-  color: #00008b; /* Dark blue color */
-}
 
 .ander-card-titel-font {
-  font-family: "Jeju Hallasan", cursive;
-  color: darkblue;
+  font-family: "Hallasan", cursive;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -31,9 +47,9 @@
 }
 
 .ander-card-description-font {
-  font-family: "Jeju Hallasan", cursive;
+  font-family: "Hallasan", cursive;
   font-size: 15px;
-  color: darkblue;
+  color: dimgray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +67,7 @@
   margin: auto; /* Center the modal */
   border-radius: 10px; /* Optional: add rounded corners */
   padding: 10px; /* Add some padding */
-  color: darkblue;
+  color: black;
 }
 
 .custom-modal img {
@@ -60,44 +76,45 @@
 }
 
 .custom-modal .modal-footer {
-  font-family: "Jeju Hallasan", cursive;
-  color: darkblue;
+  font-family: "Hallasan", cursive;
+  color: black;
   text-align: center; /* Center-align text in the footer */
   padding: 10px;
-  color: darkblue;
 }
 
 .contact-font {
-  font-family: "Jeju Hallasan", cursive;
+  font-family: "Hallasan", cursive;
   font-size: 20px;
   font-weight: bold;
-  color: darkblue;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 40px;
 }
+
 .about-container {
-  font-family: "Jeju Hallasan", cursive;
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Hallasan", cursive;
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .section-title {
-  font-family: "Jeju Hallasan", cursive;
+  font-family: "Hallasan", cursive;
   font-size: 2rem;
-  color: darkblue;
+  color: black;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.text-content {
-  font-family: "Jeju Hallasan", cursive;
+.about-content {
+  font-family: "Hallasan", cursive;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: darkblue;
+  color: black;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
@@ -135,3 +152,11 @@
   height: 5rem; /* Adjust spinner size */
   border-width: 0.5rem; /* Optional: Adjust border thickness */
 }
+
+.contactMe {
+    font-family: 'Hallasan', cursive;
+    font-size: 70px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
