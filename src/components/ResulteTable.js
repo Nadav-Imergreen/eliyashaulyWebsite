@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import { Row, Container } from "react-bootstrap";
+import {Row, Container, Col} from "react-bootstrap";
 import ImageCard from "./ImageCard";
 import { Modal, Button } from "react-bootstrap";
 
 function ResultsTable({ searchResults }) {
+
+    const [imageSizes, setImageSizes] = useState({});
+
+    const handleLoadDimensions = (id, width, height) => {
+        setImageSizes(prev => ({ ...prev, [id]: { width, height } }));
+    };
+
+
     // Sort searchResults by the "index" field
     const sortedResults = [...searchResults].sort((a, b) => a.index - b.index);
 
@@ -28,12 +36,25 @@ function ResultsTable({ searchResults }) {
     return (
         <React.Fragment>
             <Container>
-                <Row xs={1} sm={1} md={2} lg={2} className="g-4">
-                    {sortedResults.map((image, index) => (
-                        <div key={image.id} onClick={() => handleSelect(index)}>
-                            <ImageCard image={image} />
-                        </div>
-                    ))}
+                <Row className="g-4">
+                    {sortedResults.map((image, index) => {
+                        const dimensions = imageSizes[image.id];
+                        const isWide =
+                            dimensions && dimensions.width > dimensions.height;
+
+                        return (
+                            <Col
+                                key={image.id}
+                                xs={12}
+                                md={isWide ? 12 : 6}
+                            >
+                                <ImageCard
+                                    image={image}
+                                    onLoadDimensions={handleLoadDimensions}
+                                />
+                            </Col>
+                        );
+                    })}
                 </Row>
             </Container>
 
