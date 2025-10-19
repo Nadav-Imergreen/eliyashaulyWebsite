@@ -47,7 +47,7 @@ function CustomModal({ sortedResults, selectedIndex, setSelectedIndex }) {
             style={{
               position: "relative",
               padding: 0,
-              backgroundColor: "#000", // רקע שחור
+              backgroundColor: "white", // white background
               display: "flex",
               justifyContent: "center",
               alignItems: "center",

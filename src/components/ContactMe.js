@@ -11,7 +11,7 @@ const ContactMe = () => {
           <h2
             style={{
               color: "black",
-              fontFamily: "Cochin",
+              fontFamily: "Neue-Haas-font",
               textAlign: "center",
             }}
             className="mb-5"
@@ -23,7 +23,7 @@ const ContactMe = () => {
             using the provided contact details.
           </p>
           <div className="mt-4 text-center">
-            <p style={{ color: "black", fontFamily: "Cochin" }}>
+            <p style={{ color: "black", fontFamily: "Neue-Haas-font" }}>
               Email:{" "}
               <a href="mailto:eliyashauly@gmail.com" style={{ color: "black" }}>
                 eliyashauly@gmail.com

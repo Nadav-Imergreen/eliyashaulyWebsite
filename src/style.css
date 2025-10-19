@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Hallasan';
-  src: url('./fonts/JejuHallasan-Regular.ttf') format('truetype');
+  font-family: "Neue-Haas-font";
+  src: url("./fonts/NeueHaasDisplayRoman.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,27 +16,26 @@
 }
 
 .custom-font {
-  font-family: 'Hallasan', cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 70px;
   color: black !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-font {
-  font-family: 'Hallasan', cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 70px;
 }
 
 .rights_reserved-font {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 15px;
   padding: 5px 10px 15px 20px;
   color: gray;
 }
 
-
 .ander-card-titel-font {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -47,7 +46,7 @@
 }
 
 .ander-card-description-font {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 15px;
   color: dimgray;
   display: flex;
@@ -76,14 +75,14 @@
 }
 
 .custom-modal .modal-footer {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   color: black;
   text-align: center; /* Center-align text in the footer */
   padding: 10px;
 }
 
 .contact-font {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 20px;
   font-weight: bold;
   color: black;
@@ -95,7 +94,7 @@
 }
 
 .about-container {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   padding: 1rem;
   background-color: transparent;
   box-shadow: none;
@@ -103,7 +102,7 @@
 }
 
 .section-title {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 2rem;
   color: black;
   text-align: center;
@@ -111,7 +110,7 @@
 }
 
 .about-content {
-  font-family: "Hallasan", cursive;
+  font-family: "Neue-Haas-font", cursive;
   font-size: 1.1rem;
   line-height: 1.8;
   color: black;
@@ -154,9 +153,8 @@
 }
 
 .contactMe {
-    font-family: 'Hallasan', cursive;
-    font-size: 70px;
-    color: black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  }
-
+  font-family: "Neue-Haas-font", cursive;
+  font-size: 70px;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
